@@ -4,6 +4,27 @@
  **/
 console.log('Der er kontakt til js/js.js')
 
+
+/*variabler*/
+let a = "Julemand" //streng
+let b = 23
+
+console.log (a+b)
+
+alert("Hej " + a )
+
+/*kontrolstruktur*/
+if (a === true) {
+console.log ("Ja")
+}
+else {
+    console.log ("Nej")
+}
+
+
+
+
+
 /**
  * JavaScript Introduktion
  */

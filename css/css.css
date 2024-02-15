@@ -13,37 +13,55 @@
   vertical-align: baseline;
   background: transparent;
 }
-
+/* OPGAVE 1: definer en palette med mindst 5 egentlige farver plus kontrasterne sort og hvid */
 /* Define variables in the :root */
  :root {
    --contrast: rgb(5, 17, 5);
    --backgr: #f1e695;
    --bgA: rgb(239, 120, 211);
    --bgB: rgb(143, 225, 142); 
+   --bgMørkeblå: rgb(53, 109, 250); 
+   --bgGul: rgb(238, 231, 132); 
+   --bgBlå: rgb(175, 209, 248); 
+   --bgRød: rgb(243, 92, 92); 
+   --bgHvid:rgb(255, 255, 255); 
 
-   /* OPGAVE 1: definer en palette med mindst 5 egentlige farver plus kontrasterne sort og hvid */
+   /*whitespace*/ 
+   --witesp: 25px;
+   --top: 10px;
+
+   /* Padding */
+   padding-top: var(--witesp);
+   padding-left: var(--witesp);
+   padding-bottom: var(--witesp);
+   padding-left: var(--witesp);
+   
+   /* Margin */
+   margin-top: 20px;
  }
 
 /* Logo: vælg selv størrelsen */
 #logo {
   width: 250px;
   height: auto;
-  /* OPGAVE 2: Hvis billedet skal have denne størrelse, hvorfor så ikke skalere billedet i Photoshop? */ 
+  /* OPGAVE 2: Hvis billedet skal have denne størrelse, 
+  hvorfor så ikke skalere billedet i Photoshop? */ 
 }
 
 /* responsive billeder */
 .resp {
-  width: 100%;
-  height: autox;
+  width: 50%;
+  height: auto;
 }
 
 header,
 footer {
-  background-color: var(--contrast);
+  background-color: var(--bgGul);
   color: var(--backgr)
 }
 
 /* OPGAVE 3: Store skærme: Skjul .smaller og .burger med CSS */
+
 
 /* OPGAVE 4: Flexbox
 
@@ -53,8 +71,20 @@ c) Hvad er padding? Og hvad sker der hvis du sætter padding til fx 32px?
 d) Brug justify-content til at fordele dine kolonner. Prøv alle muligheder.
 
 Se: https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-justify-content
-
 */
+
+.row{
+display: flex;
+justify-content:space-around
+}
+
+.col {
+display: block;
+justify-content:space-around
+}
+
+
+
 
 /* OPGAVE 5: Responsivt design
 
@@ -76,25 +106,50 @@ Herunder ser du de responsive regler, der skal redigeres.
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  body {
-    /* brug dine variabler her! */
-    background-color: var(--bgB); 
-  }
+  
 }
 
 /* ... fortsæt selv med breakpoints ... */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  body {
+    /* brug dine variabler her! */
+    background-color: var(--bgHvid); 
+  }
+  .row{
+    display: flex;
+    justify-content:space-around
+    }
+  .burger {
+    display: block;
+  }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+  body {
+    /* brug dine variabler her! */
+    background-color: var(--bgGul); 
+  }
+  .row{
+    display: flex;
+    justify-content:space-around
+    }
+  .burger {
+    display: block;
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+
+}
+
+
 
 /* Opgave 6: Vis og skjul relevante menuer 
 
